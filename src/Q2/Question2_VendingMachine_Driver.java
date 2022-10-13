@@ -1,9 +1,9 @@
 package Q2;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
-public class Question2_VendingMachine {
+public class Question2_VendingMachine_Driver {
 
     public static void main(String[] args){
 
