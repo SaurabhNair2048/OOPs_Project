@@ -1,13 +1,12 @@
 package Q2;
 
+import java.time.LocalDateTime;
+
 abstract class Item{
-    private String name;
+    private String id;
 
     Item(String name){
-        this.name = name;
+        this.id=name+ LocalDateTime.now().hashCode();
     }
 
-    public String getName(){
-        return this.name;
-    }
 }

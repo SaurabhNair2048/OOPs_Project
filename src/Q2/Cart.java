@@ -46,7 +46,7 @@ class Cart{
             s.nextLine();
         }
         int cost = 0;
-        int mult_fact = str.equalsIgnoreCase("cash")?1:2;
+        int mult_fact = str.equalsIgnoreCase("card")?2:1;
         for(int i=0; i < items.length; i++){
             int sum=0;
             switch(i){

@@ -23,9 +23,12 @@ public class Question2_VendingMachine_Driver {
                 System.out.println("2: Peanuts; Quantity: " + (vm.getItemCount(2)-cart.getItemCount(2)));
                 System.out.println("3: Pringles; Quantity: " + (vm.getItemCount(3)-cart.getItemCount(3)));
                 System.out.println("4: Snickers; Quantity: " + (vm.getItemCount(4)-cart.getItemCount(4)));
-                String str = s.next();
+                String str = s.next().trim();
                 if (s.hasNextLine()) {
                     s.nextLine();
+                }
+                if(str.length()>1){
+                    continue addItem;
                 }
                 char item = str.charAt(0);
                 if(item=='5'){
@@ -36,11 +39,14 @@ public class Question2_VendingMachine_Driver {
                     continue addItem;
                 }
                 System.out.println("Enter quantity of selected item between 1 to 5: [Invalid inputs lead to 0 items added]");
-                String count = s.next();
+                String count = s.next().trim();
                 if (s.hasNextLine()) {
                     s.nextLine();
                 }
                 char c = count.charAt(0);
+                if(count.length()>1){
+                    c = '9';
+                }
 //                if (c > '0' && c <= '5') {
                     if (item >= '0' && item <= '4') {
                         cart.addItem(item - '0', c - '0');
